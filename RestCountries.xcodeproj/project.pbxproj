@@ -10,10 +10,14 @@
 		1A7AD11E2B058DF000001344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD11D2B058DF000001344 /* AppDelegate.swift */; };
 		1A7AD1202B058DF000001344 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD11F2B058DF000001344 /* SceneDelegate.swift */; };
 		1A7AD1222B058DF000001344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD1212B058DF000001344 /* ViewController.swift */; };
-		1A7AD1252B058DF000001344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AD1232B058DF000001344 /* Main.storyboard */; };
 		1A7AD1282B058DF000001344 /* RestCountries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD1262B058DF000001344 /* RestCountries.xcdatamodeld */; };
 		1A7AD12A2B058DF200001344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AD1292B058DF200001344 /* Assets.xcassets */; };
 		1A7AD12D2B058DF200001344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7AD12B2B058DF200001344 /* LaunchScreen.storyboard */; };
+		1A7AD1382B058EE200001344 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD1372B058EE200001344 /* APICaller.swift */; };
+		1A7AD13B2B058EF900001344 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD13A2B058EF900001344 /* Country.swift */; };
+		1A7AD13D2B05939E00001344 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AD13C2B05939E00001344 /* DetailViewController.swift */; };
+		1A7AD1402B05950700001344 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7AD13F2B05950700001344 /* SDWebImage */; };
+		1A7AD1422B05950700001344 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7AD1412B05950700001344 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +25,13 @@
 		1A7AD11D2B058DF000001344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7AD11F2B058DF000001344 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A7AD1212B058DF000001344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A7AD1242B058DF000001344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7AD1272B058DF000001344 /* RestCountries.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestCountries.xcdatamodel; sourceTree = "<group>"; };
 		1A7AD1292B058DF200001344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A7AD12C2B058DF200001344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A7AD12E2B058DF200001344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7AD1372B058EE200001344 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		1A7AD13A2B058EF900001344 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1A7AD13C2B05939E00001344 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7AD1422B05950700001344 /* SDWebImageMapKit in Frameworks */,
+				1A7AD1402B05950700001344 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +66,50 @@
 		1A7AD11C2B058DF000001344 /* RestCountries */ = {
 			isa = PBXGroup;
 			children = (
-				1A7AD11D2B058DF000001344 /* AppDelegate.swift */,
-				1A7AD11F2B058DF000001344 /* SceneDelegate.swift */,
-				1A7AD1212B058DF000001344 /* ViewController.swift */,
-				1A7AD1232B058DF000001344 /* Main.storyboard */,
+				1A7AD1362B058ED600001344 /* Managers */,
+				1A7AD1392B058EEC00001344 /* Model */,
+				1A7AD1342B058EA600001344 /* Resources */,
+				1A7AD1352B058EB700001344 /* Controllers */,
 				1A7AD1292B058DF200001344 /* Assets.xcassets */,
 				1A7AD12B2B058DF200001344 /* LaunchScreen.storyboard */,
 				1A7AD12E2B058DF200001344 /* Info.plist */,
 				1A7AD1262B058DF000001344 /* RestCountries.xcdatamodeld */,
 			);
 			path = RestCountries;
+			sourceTree = "<group>";
+		};
+		1A7AD1342B058EA600001344 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AD11D2B058DF000001344 /* AppDelegate.swift */,
+				1A7AD11F2B058DF000001344 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A7AD1352B058EB700001344 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AD1212B058DF000001344 /* ViewController.swift */,
+				1A7AD13C2B05939E00001344 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A7AD1362B058ED600001344 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AD1372B058EE200001344 /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1A7AD1392B058EEC00001344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AD13A2B058EF900001344 /* Country.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +128,10 @@
 			dependencies = (
 			);
 			name = RestCountries;
+			packageProductDependencies = (
+				1A7AD13F2B05950700001344 /* SDWebImage */,
+				1A7AD1412B05950700001344 /* SDWebImageMapKit */,
+			);
 			productName = RestCountries;
 			productReference = 1A7AD11A2B058DF000001344 /* RestCountries.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 1A7AD1112B058DF000001344;
+			packageReferences = (
+				1A7AD13E2B05950700001344 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1A7AD11B2B058DF000001344 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +179,6 @@
 			files = (
 				1A7AD12D2B058DF200001344 /* LaunchScreen.storyboard in Resources */,
 				1A7AD12A2B058DF200001344 /* Assets.xcassets in Resources */,
-				1A7AD1252B058DF000001344 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,21 +192,16 @@
 				1A7AD1282B058DF000001344 /* RestCountries.xcdatamodeld in Sources */,
 				1A7AD1222B058DF000001344 /* ViewController.swift in Sources */,
 				1A7AD11E2B058DF000001344 /* AppDelegate.swift in Sources */,
+				1A7AD1382B058EE200001344 /* APICaller.swift in Sources */,
+				1A7AD13B2B058EF900001344 /* Country.swift in Sources */,
 				1A7AD1202B058DF000001344 /* SceneDelegate.swift in Sources */,
+				1A7AD13D2B05939E00001344 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A7AD1232B058DF000001344 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A7AD1242B058DF000001344 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A7AD12B2B058DF200001344 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,7 +344,6 @@
 				INFOPLIST_FILE = RestCountries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,7 +371,6 @@
 				INFOPLIST_FILE = RestCountries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,6 +408,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A7AD13E2B05950700001344 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A7AD13F2B05950700001344 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7AD13E2B05950700001344 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		1A7AD1412B05950700001344 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7AD13E2B05950700001344 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1A7AD1262B058DF000001344 /* RestCountries.xcdatamodeld */ = {
